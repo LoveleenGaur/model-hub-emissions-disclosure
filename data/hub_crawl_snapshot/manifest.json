@@ -1,0 +1,76 @@
+{
+  "generated_utc": "2026-09-14T19:07:46.197112+00:00",
+  "config": {
+    "n_models": 3000,
+    "n_readme": 600,
+    "seed": 20261203,
+    "sort_by": "downloads",
+    "readme_max_chars": 40000,
+    "sleep_between_readmes": 0.15,
+    "cache_dir": "/content/hf_gov_cache"
+  },
+  "environment": {
+    "python": "3.13.15",
+    "huggingface_hub": "1.29.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.0"
+  },
+  "counts": {
+    "models_sampled": 3000,
+    "parents_fetched": 374,
+    "readmes_retrieved": 590,
+    "edges_total": 1333,
+    "edges_resolvable": 1259,
+    "prose_cards_audited": 590,
+    "edges_restricted_parent": 246,
+    "cards_both_channels": 40,
+    "cards_silent": 343
+  },
+  "headline_rates": {
+    "base_model_declaration_rate": 0.38166666666666665,
+    "license_identical_rate": 0.8038125496425734,
+    "restricted_parent_leak_rate": 0.17479674796747968,
+    "prose_names_parent_rate": 0.1,
+    "both_channels_disagree_rate": 0.15000000000000002,
+    "silent_rate": 0.5813559322033899
+  },
+  "artifacts": {
+    "models.jsonl": {
+      "bytes": 1763304,
+      "sha256_16": "6e450503998e2eea"
+    },
+    "parents.jsonl": {
+      "bytes": 215874,
+      "sha256_16": "28883f30b4b4e09b"
+    },
+    "readmes.jsonl": {
+      "bytes": 6383734,
+      "sha256_16": "c3666e3f475e314c"
+    },
+    "license_edges.csv": {
+      "bytes": 170974,
+      "sha256_16": "e60e46e880b98eda"
+    },
+    "prose_contradictions.csv": {
+      "bytes": 69642,
+      "sha256_16": "18c50afcae37016b"
+    },
+    "prose_parents_fixed.csv": {
+      "bytes": 54104,
+      "sha256_16": "33def88a67cd22ff"
+    },
+    "validation_parents_TO_CODE.csv": {
+      "bytes": 9179,
+      "sha256_16": "f2d0af2ffced1e92"
+    },
+    "validation_sample_TO_CODE.csv": {
+      "bytes": 5429,
+      "sha256_16": "e8555925d52ad416"
+    }
+  },
+  "analysis_version": "v2 (cell 10b prose extraction)",
+  "superseded": {
+    "cell_10_any_contradiction_rate": 0.022033898305084745,
+    "reason": "Cell 10 missed markdown-link parents and counted non-provenance uses of 'fine-tuned'."
+  }
+}
