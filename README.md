@@ -34,7 +34,7 @@ notebooks/
 src/
   analysis_v3.py                       final analysis, hand-verified patterns
 data/
-  hf_gov_cache_export.zip              the cached snapshot (2 MB)
+  hub_crawl_snapshot.zip               the cached crawl (2 MB, 9 files)
   cards_annotated.csv                  per-card flags used in Tables 2 and 3
 docs/
   coding_protocol.md                   manual verification protocol
@@ -52,7 +52,7 @@ and will not return the same snapshot if re-run, because the hub changes.
 
 ```bash
 pip install -r requirements.txt
-unzip data/hf_gov_cache_export.zip -d cache/
+unzip data/hub_crawl_snapshot.zip -d cache/
 HF_GOV_CACHE=cache python src/analysis_v3.py
 ```
 
@@ -65,15 +65,26 @@ automatically.
 
 ## Data description
 
-`data/hf_gov_cache_export.zip` contains:
+`data/hub_crawl_snapshot.zip` contains the full crawl. Only the first three
+files are used by the analysis in this repository; the rest are included because
+they were produced by the same crawl and support a companion study of licence
+and provenance inheritance on the same snapshot.
 
-| File | Contents |
-|---|---|
-| `models.jsonl` | metadata for 3000 models: id, downloads, tags, licence, declared parents, derivation type |
-| `parents.jsonl` | metadata for 374 declared parent repositories not in the main sample |
-| `readmes.jsonl` | README text for 590 of 600 sampled models |
-| `license_edges.csv` | 1333 parent-child edges with licence inheritance outcomes |
-| `manifest.json` | configuration, package versions, row counts, file checksums |
+| File | Used here | Contents |
+|---|---|---|
+| `models.jsonl` | yes | metadata for 3000 models: id, downloads, tags, licence, declared parents, derivation type |
+| `readmes.jsonl` | yes | README text for 590 of 600 sampled models |
+| `manifest.json` | yes | configuration, package versions, row counts, file checksums |
+| `parents.jsonl` | no | metadata for 374 declared parent repositories outside the main sample |
+| `license_edges.csv` | no | 1333 parent-child edges with licence inheritance outcomes |
+| `prose_parents_fixed.csv` | no | per-card provenance extraction from the companion study |
+| `prose_contradictions.csv` | no | superseded first-pass extraction, retained for transparency |
+| `validation_parents_TO_CODE.csv` | no | manual coding sheet for the companion study |
+| `validation_sample_TO_CODE.csv` | no | superseded coding sheet |
+
+The archive deliberately contains no `figures/` directory. An earlier build of
+this snapshot carried three figures belonging to the companion study, which
+would have collided with this repository's own `figures/` on extraction.
 
 The crawl records public repository metadata only. No personal data were
 collected. Repository and account identifiers are public platform identifiers.

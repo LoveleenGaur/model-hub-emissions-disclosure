@@ -11,8 +11,8 @@ history of one paper's data depend on edits to the other's.
 
 Suggested names, already used in the CITATION files:
 
-- `esr-paper1-disclosure`
-- `esr-paper2-quantization-energy`
+- `model-hub-emissions-disclosure`
+- `quantization-inference-energy`
 
 Make them **public** before connecting Zenodo. Zenodo cannot archive a private
 repository.
@@ -20,12 +20,12 @@ repository.
 ## 2. Push
 
 ```bash
-cd esr-paper1-disclosure
+cd model-hub-emissions-disclosure
 git init
 git add .
 git commit -m "Replication package for environmental disclosure audit"
 git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/esr-paper1-disclosure.git
+git remote add origin https://github.com/YOUR-USERNAME/model-hub-emissions-disclosure.git
 git push -u origin main
 ```
 
