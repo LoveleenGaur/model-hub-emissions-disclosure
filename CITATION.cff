@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: >-
+  Replication package: Efficiency without accounting: environmental
+  disclosure gaps for compressed machine learning models on a public
+  model hub
+message: >-
+  If you use this software or data, please cite the associated
+  manuscript. Update the preferred-citation block once the paper has a
+  DOI.
+type: software
+authors:
+  - family-names: Gaur
+    given-names: Loveleen
+    orcid: "https://orcid.org/0000-0002-0885-1550"
+    affiliation: Alliance University, Bengaluru, India
+    email: gaurloveleen@yahoo.com
+  - family-names: Raman
+    given-names: Ramakrishnan
+    affiliation: Symbiosis International (Deemed University), Pune, India
+    email: raman06@yahoo.com
+repository-code: "https://github.com/REPLACE-ME/esr-paper1-disclosure"
+license: MIT
+keywords:
+  - model documentation
+  - environmental disclosure
+  - model hubs
+  - quantization
+  - green artificial intelligence
+preferred-citation:
+  type: article
+  title: >-
+    Efficiency without accounting: environmental disclosure gaps for
+    compressed machine learning models on a public model hub
+  authors:
+    - family-names: Gaur
+      given-names: Loveleen
+      orcid: "https://orcid.org/0000-0002-0885-1550"
+    - family-names: Raman
+      given-names: Ramakrishnan
+  journal: Environmental Systems Research
+  year: 2026
+  # doi: TO BE ADDED ON ACCEPTANCE
